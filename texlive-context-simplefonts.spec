@@ -1,0 +1,55 @@
+Name:		texlive-context-simplefonts
+Version:	20110619
+Release:	1
+Summary:	Simplified font usage for ConTeXt
+Group:		Publishing
+URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-simplefonts
+License:	GPL
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-simplefonts.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-simplefonts.doc.tar.xz
+BuildArch:	noarch
+BuildRequires:	texlive-tlpkg
+Requires(post):	texlive-tlpkg
+Requires:	texlive-context
+Conflicts:	texlive-texmf <= 20110705-3
+Requires(post):	texlive-context.bin
+
+%description
+The package defines a set of commands for dealing with a new
+font in ConTeXt.
+
+%pre
+    %_texmf_mtxrun_pre
+    %_texmf_mktexlsr_pre
+
+%post
+    %_texmf_mtxrun_post
+    %_texmf_mktexlsr_post
+
+%preun
+    if [ $1 -eq 0 ]; then
+	%_texmf_mtxrun_pre
+	%_texmf_mktexlsr_pre
+    fi
+
+%postun
+    if [ $1 -eq 0 ]; then
+	%_texmf_mtxrun_post
+	%_texmf_mktexlsr_post
+    fi
+
+#-----------------------------------------------------------------------
+%files
+%{_texmfdistdir}/tex/context/third/simplefonts/t-simplefonts.lua
+%{_texmfdistdir}/tex/context/third/simplefonts/t-simplefonts.tex
+%doc %{_texmfdistdir}/doc/context/third/simplefonts/README
+
+#-----------------------------------------------------------------------
+%prep
+%setup -c -a0 -a1
+
+%build
+
+%install
+mkdir -p %{buildroot}%{_texmfdistdir}
+cp -fpar tex doc %{buildroot}%{_texmfdistdir}
