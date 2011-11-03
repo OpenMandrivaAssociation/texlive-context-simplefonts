@@ -1,3 +1,9 @@
+# revision 23369
+# category ConTeXt
+# catalog-ctan /macros/context/contrib/context-simplefonts
+# catalog-date 2011-06-19 22:13:53 +0200
+# catalog-license gpl
+# catalog-version undef
 Name:		texlive-context-simplefonts
 Version:	20110619
 Release:	1
@@ -43,6 +49,7 @@ font in ConTeXt.
 %{_texmfdistdir}/tex/context/third/simplefonts/t-simplefonts.lua
 %{_texmfdistdir}/tex/context/third/simplefonts/t-simplefonts.tex
 %doc %{_texmfdistdir}/doc/context/third/simplefonts/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -53,3 +60,5 @@ font in ConTeXt.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
