@@ -1,4 +1,4 @@
-# revision 23369
+# revision 24866
 # category ConTeXt
 # catalog-ctan /macros/context/contrib/context-simplefonts
 # catalog-date 2011-06-19 22:13:53 +0200
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-context-simplefonts
 Version:	20110619
-Release:	1
+Release:	2
 Summary:	Simplified font usage for ConTeXt
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-simplefonts
@@ -18,30 +18,25 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Requires(post):	texlive-context
-Conflicts:	texlive-texmf <= 20110705-3
 
 %description
 The package defines a set of commands for dealing with a new
 font in ConTeXt.
 
 %pre
-    %_texmf_mtxrun_pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
-    %_texmf_mtxrun_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mtxrun_pre
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
-	%_texmf_mtxrun_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
