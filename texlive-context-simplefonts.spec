@@ -23,16 +23,8 @@ Requires(post):	texlive-context
 The package defines a set of commands for dealing with a new
 font in ConTeXt.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -44,7 +36,6 @@ font in ConTeXt.
 %{_texmfdistdir}/tex/context/third/simplefonts/t-simplefonts.lua
 %{_texmfdistdir}/tex/context/third/simplefonts/t-simplefonts.tex
 %doc %{_texmfdistdir}/doc/context/third/simplefonts/README
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -55,5 +46,3 @@ font in ConTeXt.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
