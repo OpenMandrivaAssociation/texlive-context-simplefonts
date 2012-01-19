@@ -1,12 +1,12 @@
-# revision 24866
+# revision 25094
 # category ConTeXt
 # catalog-ctan /macros/context/contrib/context-simplefonts
-# catalog-date 2011-06-19 22:13:53 +0200
+# catalog-date 2011-12-28 10:22:06 +0100
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-context-simplefonts
-Version:	20110619
-Release:	3
+Version:	20111228
+Release:	1
 Summary:	Simplified font usage for ConTeXt
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-simplefonts
@@ -20,8 +20,8 @@ Requires(post):	texlive-kpathsea
 Requires(post):	texlive-context
 
 %description
-The package defines a set of commands for dealing with a new
-font in ConTeXt.
+The package defines a set of commands for loading and using
+fonts in ConTeXt.
 
 %post
     %{_sbindir}/texlive.post
