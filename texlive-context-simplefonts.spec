@@ -1,11 +1,11 @@
-# revision 25094
+# revision 27171
 # category ConTeXt
 # catalog-ctan /macros/context/contrib/context-simplefonts
-# catalog-date 2011-12-28 10:22:06 +0100
+# catalog-date 2012-07-26 08:34:30 +0200
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-context-simplefonts
-Version:	20111228
+Version:	20120726
 Release:	1
 Summary:	Simplified font usage for ConTeXt
 Group:		Publishing
@@ -34,7 +34,8 @@ fonts in ConTeXt.
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/tex/context/third/simplefonts/t-simplefonts.lua
-%{_texmfdistdir}/tex/context/third/simplefonts/t-simplefonts.tex
+%{_texmfdistdir}/tex/context/third/simplefonts/t-simplefonts.mkii
+%{_texmfdistdir}/tex/context/third/simplefonts/t-simplefonts.mkiv
 %doc %{_texmfdistdir}/doc/context/third/simplefonts/README
 
 #-----------------------------------------------------------------------
