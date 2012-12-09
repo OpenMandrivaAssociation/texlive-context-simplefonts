@@ -47,3 +47,29 @@ fonts in ConTeXt.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Aug 07 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120726-1
++ Revision: 812177
+- Update to latest release.
+
+* Thu Jan 19 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111228-1
++ Revision: 762596
+- Update to latest upstream package
+
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20110619-3
++ Revision: 750519
+- Rebuild to reduce used resources
+
+* Mon Dec 26 2011 Paulo Andrade <pcpa@mandriva.com.br> 20110619-2
++ Revision: 745200
+- texlive-context-simplefonts
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20110619-1
++ Revision: 718142
+- texlive-context-simplefonts
+- texlive-context-simplefonts
+- texlive-context-simplefonts
+- texlive-context-simplefonts
+
