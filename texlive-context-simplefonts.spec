@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-context-simplefonts
 Version:	20120813
-Release:	7
+Release:	8
 Summary:	Simplified font usage for ConTeXt
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-simplefonts
