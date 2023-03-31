@@ -1,6 +1,6 @@
 Name:		texlive-context-simplefonts
 Version:	47085
-Release:	1
+Release:	2
 Summary:	Simplified font usage for ConTeXt
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-simplefonts
