@@ -3,7 +3,7 @@ Version:	47085
 Release:	2
 Summary:	Simplified font usage for ConTeXt
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-simplefonts
+URL:		https://www.ctan.org/tex-archive/macros/context/contrib/context-simplefonts
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-simplefonts.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-simplefonts.doc.r%{version}.tar.xz
